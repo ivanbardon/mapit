@@ -14,6 +14,7 @@
 	<style>
       html, body, #map-canvas {
         height: 100%;
+        width: 100%;
         margin: 0px;
         padding: 0px
       }
@@ -24,13 +25,33 @@
       #map-canvas img {
       	margin-top: 100px;
       }
+      #menu {
+        margin-left: 40%;
+      }
+      #menu div {
+        border: solid 1px black;
+        display: inline-block;
+        border-radius: 20px;
+        width: 40px;
+        height: 40px;
+        margin-left: 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+
+      }
     </style>
 	<title>geoLab</title>
 </head>
 <body>
+  <div id="menu">
+    <div id="boton1" onclick="mostrarRest()"></div>
+    <div id="boton2" onclick="limpiarRest()"></div>
+    <div id="boton3"></div>
+  </div>
 	<div id="map-canvas">
-		<img src="images/loading2.gif" alt="gif-loading">
-		<p>2014© appßeta/geoLab</p>
 	</div>
+  <!-- <img src="images/loading2.gif" alt="gif-loading">
+    <p>2014© appßeta/geoLab</p> -->
 </body>
 </html>

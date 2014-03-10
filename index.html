@@ -12,45 +12,50 @@
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&language=ca"></script>
 	<script src="main.js"></script>
 	<style>
-      html, body, #map-canvas {
+      html, body{
         height: 100%;
         width: 100%;
         margin: 0px;
         padding: 0px
       }
-      #map-canvas p {
-      	text-align: center;
-      	color: #848484;
+      #header {
+        height: 10%;
       }
-      #map-canvas img {
-      	margin-top: 100px;
+      #map-canvas {
+        height: 90%;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+
       }
       #menu {
         margin-left: 40%;
+        background-color: rgba(255, 255, 255, 0.1);
+        float: left;
       }
       #menu div {
-        border: solid 1px black;
+        border: dotted 1px #0080FF;
         display: inline-block;
         border-radius: 20px;
         width: 40px;
         height: 40px;
         margin-left: 15px;
         margin-top: 5px;
-        margin-bottom: 5px;
-
-
       }
     </style>
 	<title>geoLab</title>
 </head>
 <body>
-  <div id="menu">
-    <div id="boton1" onclick="mostrarRest()"></div>
-    <div id="boton2" onclick="limpiarRest()"></div>
-    <div id="boton3"></div>
+  <div id="header">
+    <div id="menu">
+      <div id="boton1" onclick="dropRest()"></div>
+      <div id="boton2" onclick="limpiarRest()"></div>
+      <div id="boton3"></div>
+    </div>
   </div>
 	<div id="map-canvas">
 	</div>
+
   <!-- <img src="images/loading2.gif" alt="gif-loading">
     <p>2014© appßeta/geoLab</p> -->
 </body>

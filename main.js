@@ -84,31 +84,27 @@ restaurantes.push(otro4);
 restaurantes.push(otro5);
 
 
-function mostrarRest() {
-
-  if (restaurantes) {
-    for (i in restaurantes) {
-      restaurantes[i].setMap(map);
-    }
-  }
-};
-
 
 function limpiarRest() {
   if (restaurantes) {
     for (i in restaurantes) {
       restaurantes[i].setMap(null);
     }
+  }iterador=0;
+};
+
+function dropRest() {
+  for (var i =0; i < restaurantes.length; i++) {
+    setTimeout(function() {
+      mostrarRest();
+    }, i * 200);
   }
 };
 
-// function dropRest() {
-//   for (var i =0; i < restaurantes.length; i++) {
-//     setTimeout(function() {
-//       mostrarRest();
-//     }, i * 200);
-//   }
-// };
+function mostrarRest () {
+	restaurantes[iterador].setMap(map);
+	iterador++;
+}
 
 
 var mossetInfo = '<div id="content">'+
@@ -116,7 +112,7 @@ var mossetInfo = '<div id="content">'+
 	'</div>'+
 	'<h1 id="firstHeading" class="firstHeading">EL MOSSET</h1>'+
 	'<div id="bodyContent">'+
-	'<iframe width="200" height="100" src="//www.youtube.com/embed/mfjqLmD6Li8?list=PL5M61thZGgm2T7Cqe2FMj1m329b_wGvct" frameborder="0" allowfullscreen></iframe>'+
+	'<iframe id="ytplayer" type="text/html" width="210" height="150" src="https://www.youtube.com/embed/M7lc1UVf-VE?controls=0&rel=0&showinfo=0&theme=light" frameborder="0" allowfullscreen></iframe>'+
 	'<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
 	'sandstone rock formation in the southern part of the '+
 	'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
@@ -138,7 +134,7 @@ var casaInfo = '<div id="content">'+
 	'</div>'+
 	'<h1 id="firstHeading" class="firstHeading">Casa</h1>'+
 	'<div id="bodyContent">'+
-	'<iframe width="200" height="100" src="//www.youtube.com/embed/mfjqLmD6Li8?list=PL5M61thZGgm2T7Cqe2FMj1m329b_wGvct" frameborder="0" allowfullscreen></iframe>'+
+	'<iframe id="ytplayer" type="text/html" width="210" height="150" src="https://www.youtube.com/embed/M7lc1UVf-VE?controls=0&rel=0&showinfo=0&theme=light" frameborder="0" allowfullscreen></iframe>'+
 	'<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
 	'sandstone rock formation in the southern part of the '+
 	'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
@@ -160,7 +156,7 @@ var otroInfo = '<div id="content">'+
 	'</div>'+
 	'<h1 id="firstHeading" class="firstHeading">Otro</h1>'+
 	'<div id="bodyContent">'+
-	'<iframe width="200" height="100" src="//www.youtube.com/embed/mfjqLmD6Li8?list=PL5M61thZGgm2T7Cqe2FMj1m329b_wGvct" frameborder="0" allowfullscreen></iframe>'+
+	'<iframe id="ytplayer" type="text/html" width="210" height="150" src="https://www.youtube.com/embed/M7lc1UVf-VE?controls=0&rel=0&showinfo=0&theme=light" frameborder="0" allowfullscreen></iframe>'+
 	'<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
 	'sandstone rock formation in the southern part of the '+
 	'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
@@ -182,7 +178,7 @@ var otro2Info = '<div id="content">'+
 	'</div>'+
 	'<h1 id="firstHeading" class="firstHeading">Otro2</h1>'+
 	'<div id="bodyContent">'+
-	'<iframe width="200" height="100" src="//www.youtube.com/embed/mfjqLmD6Li8?list=PL5M61thZGgm2T7Cqe2FMj1m329b_wGvct" frameborder="0" allowfullscreen></iframe>'+
+	'<iframe id="ytplayer" type="text/html" width="210" height="150" src="https://www.youtube.com/embed/M7lc1UVf-VE?controls=0&rel=0&showinfo=0&theme=light" frameborder="0" allowfullscreen></iframe>'+
 	'<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
 	'sandstone rock formation in the southern part of the '+
 	'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
@@ -204,7 +200,7 @@ var otro3Info = '<div id="content">'+
 	'</div>'+
 	'<h1 id="firstHeading" class="firstHeading">Otro3</h1>'+
 	'<div id="bodyContent">'+
-	'<iframe width="200" height="100" src="//www.youtube.com/embed/mfjqLmD6Li8?list=PL5M61thZGgm2T7Cqe2FMj1m329b_wGvct" frameborder="0" allowfullscreen></iframe>'+
+	'<iframe id="ytplayer" type="text/html" width="210" height="150" src="https://www.youtube.com/embed/M7lc1UVf-VE?controls=0&rel=0&showinfo=0&theme=light" frameborder="0" allowfullscreen></iframe>'+
 	'<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
 	'sandstone rock formation in the southern part of the '+
 	'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
@@ -226,7 +222,7 @@ var otro4Info = '<div id="content">'+
 	'</div>'+
 	'<h1 id="firstHeading" class="firstHeading">Otro4</h1>'+
 	'<div id="bodyContent">'+
-	'<iframe width="200" height="100" src="//www.youtube.com/embed/mfjqLmD6Li8?list=PL5M61thZGgm2T7Cqe2FMj1m329b_wGvct" frameborder="0" allowfullscreen></iframe>'+
+	'<iframe id="ytplayer" type="text/html" width="210" height="150" src="https://www.youtube.com/embed/M7lc1UVf-VE?controls=0&rel=0&showinfo=0&theme=light" frameborder="0" allowfullscreen></iframe>'+
 	'<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
 	'sandstone rock formation in the southern part of the '+
 	'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
@@ -248,7 +244,7 @@ var otro5Info = '<div id="content">'+
 	'</div>'+
 	'<h1 id="firstHeading" class="firstHeading">Otro5</h1>'+
 	'<div id="bodyContent">'+
-	'<iframe width="200" height="100" src="//www.youtube.com/embed/mfjqLmD6Li8?list=PL5M61thZGgm2T7Cqe2FMj1m329b_wGvct" frameborder="0" allowfullscreen></iframe>'+
+	'<iframe id="ytplayer" type="text/html" width="210" height="150" src="https://www.youtube.com/embed/M7lc1UVf-VE?controls=0&rel=0&showinfo=0&theme=light" frameborder="0" allowfullscreen></iframe>'+
 	'<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
 	'sandstone rock formation in the southern part of the '+
 	'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+

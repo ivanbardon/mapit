@@ -104,7 +104,7 @@ function dropRest() {
 function mostrarRest () {
 	restaurantes[iterador].setMap(map);
 	iterador++;
-}
+};
 
 
 var mossetInfo = '<div id="content">'+

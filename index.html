@@ -4,12 +4,12 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=no" />
 	<meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="geoLab">
-	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&language=ca"></script>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="geoLab">
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&language=ca"></script>
 	<script src="main.js"></script>
 	<style>
       html, body{
@@ -18,44 +18,53 @@
         margin: 0px;
         padding: 0px
       }
-      #header {
-        height: 10%;
+      button {
+        background-color: white;
+        border-radius: 50%;
+        border: 1px solid black;
+        display: inline-block;
+        margin: 5px;
       }
       #map-canvas {
-        height: 90%;
+        height: 50%;
         width: 100%;
         margin: 0px;
         padding: 0px;
 
       }
-      #menu {
-        margin-left: 40%;
-        background-color: rgba(255, 255, 255, 0.1);
-        float: left;
+      .menu {
+        border: 1px solid black;
+
       }
-      #menu div {
-        border: dotted 1px #0080FF;
+      .menu p {
+        font-size: 20px;
+        text-align: center;
         display: inline-block;
-        border-radius: 20px;
-        width: 40px;
-        height: 40px;
-        margin-left: 15px;
-        margin-top: 5px;
+        margin-left: 5%;
       }
     </style>
 	<title>geoLab</title>
 </head>
 <body>
-  <div id="header">
-    <div id="menu">
-      <div id="boton1" onclick="dropRest()"></div>
-      <div id="boton2" onclick="limpiarRest()"></div>
-      <div id="boton3"></div>
-    </div>
-  </div>
 	<div id="map-canvas">
 	</div>
-
+  <div class="menu">
+    <p>geoLab</p>
+    <button id="btnRest" type="button" onclick="dropRest()"><img src="images/icon_rest.png" alt=""></button>
+    <button id="btnOfe" type="button" onclick="limpiarRest()"><img src="images/icon_camera.png" alt=""></button>
+    <button id="btnPos" type="button"><img src="images/icon_pos.png" alt=""></button>
+    <button id="btnMas" type="button"><img src="images/icon_plus.png" alt=""></button>
+  </div>
+  <div id="resultados" class="resultados">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
   <!-- <img src="images/loading2.gif" alt="gif-loading">
     <p>2014© appßeta/geoLab</p> -->
 </body>

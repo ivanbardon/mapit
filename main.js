@@ -10,7 +10,7 @@ function inicio(){
 function initialize() {
 	var mapOptions = {
 	  zoom: 15,
-	  center: new google.maps.LatLng(40.594679 ,0.445592),
+	  center: new google.maps.LatLng(40.597025 ,0.445763),
 	  minZoom: 12,
 	  maxZoom: 21,
 	  disableDefaultUI: true,
@@ -28,49 +28,49 @@ var casa = new google.maps.Marker({
 	position:new google.maps.LatLng(40.598007, 0.450070),
 	title: 'vamos a ver como leches aparece este texto!!!',
 	animation: google.maps.Animation.DROP,
-	icon: 'images/icon_rest.png',
+	// icon: 'images/icon_rest.png',
 	map: map
 });
 var otro = new google.maps.Marker({
 	position:new google.maps.LatLng(40.599111, 0.446342),
 	title: 'Este es otro, claramente',
 	animation: google.maps.Animation.DROP,
-	icon: 'images/icon_rest.png',
+	// icon: 'images/icon_rest.png',
 	map: map
 });
 var otro2 = new google.maps.Marker({
 	position:new google.maps.LatLng(40.597013, 0.443406),
 	title: 'Este es otro, claramente',
 	animation: google.maps.Animation.DROP,
-	icon: 'images/icon_rest.png',
+	// icon: 'images/icon_rest.png',
 	map: map
 });
 var otro3 = new google.maps.Marker({
 	position:new google.maps.LatLng(40.595995, 0.446282),
 	title: 'Este es otro, claramente',
 	animation: google.maps.Animation.DROP,
-	icon: 'images/icon_rest.png',
+	// icon: 'images/icon_rest.png',
 	map: map
 });
 var otro4 = new google.maps.Marker({
 	position:new google.maps.LatLng(40.596410, 0.449415),
 	title: 'Este es otro, claramente',
 	animation: google.maps.Animation.DROP,
-	icon: 'images/icon_rest.png',
+	// icon: 'images/icon_rest.png',
 	map: map
 });
 var otro5 = new google.maps.Marker({
 	position:new google.maps.LatLng(40.598145, 0.446056),
 	title: 'Este es otro, claramente',
 	animation: google.maps.Animation.DROP,
-	icon: 'images/icon_rest.png',
+	// icon: 'images/icon_rest.png',
 	map: map
 });
 var mosset = new google.maps.Marker({
 	position: new google.maps.LatLng(40.59737437738112, 0.44412755828148853),
 	animation: google.maps.Animation.DROP,
 	map: map,
-	icon: 'images/icon_rest.png',
+	// icon: 'images/icon_rest.png',
 	title: 'EL MOSSET'
 });
 

@@ -1,71 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=no" />
-	<meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="geoLab">
-  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&language=ca"></script>
-	<script src="main.js"></script>
-	<style>
-      html, body{
-        height: 100%;
-        width: 100%;
-        margin: 0px;
-        padding: 0px
-      }
-      button {
-        background-color: white;
-        border-radius: 50%;
-        border: 1px solid black;
-        display: inline-block;
-        margin: 5px;
-      }
-      #map-canvas {
-        height: 50%;
-        width: 100%;
-        margin: 0px;
-        padding: 0px;
-
-      }
-      .menu {
-        border: 1px solid black;
-
-      }
-      .menu p {
-        font-size: 20px;
-        text-align: center;
-        display: inline-block;
-        margin-left: 5%;
-      }
-    </style>
-	<title>geoLab</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="CSS/normalize.css">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+  <link rel="stylesheet" href="CSS/mystyles.css">
+  <title>Anonymous</title>
 </head>
 <body>
-	<div id="map-canvas">
-	</div>
-  <div class="menu">
-    <p>geoLab</p>
-    <button id="btnRest" type="button" onclick="dropRest()"><img src="images/icon_rest.png" alt=""></button>
-    <button id="btnOfe" type="button" onclick="limpiarRest()"><img src="images/icon_camera.png" alt=""></button>
-    <button id="btnPos" type="button"><img src="images/icon_pos.png" alt=""></button>
-    <button id="btnMas" type="button"><img src="images/icon_plus.png" alt=""></button>
-  </div>
-  <div id="resultados" class="resultados">
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </div>
-  <!-- <img src="images/loading2.gif" alt="gif-loading">
-    <p>2014© appßeta/geoLab</p> -->
+
+  <div id="mapa"></div>
+
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+  <script src="JavaScript/main.js"></script>
 </body>
 </html>

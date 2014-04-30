@@ -2,5 +2,20 @@
 	position: absolute;
 	height: 100%;
 	top: 0;
-	width: 100%
-};
+	width: 100%;
+}
+.botonera {
+	width: 100%;
+	height: 20%;
+	bottom: 0px;
+	position: absolute;
+}
+.botonera button {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 1px solid black;
+	margin-left: 15px;
+	color: white;
+}

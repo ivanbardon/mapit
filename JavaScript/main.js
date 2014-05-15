@@ -1,11 +1,13 @@
 var map;
 var user;
+var nickname;
 var mapaNormal = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 var mapaNegro = L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png');
 var mapaGris = L.tileLayer('http://openmapsurfer.uni-hd.de/tiles/roadsg/x={x}&y={y}&z={z}');
 var mapaTopo =  L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png');
 
 $(document).on('ready',function (){
+	nickname = window.prompt('Posa´t nom');
 	map = L.map('mapa', {
 	    center: [32.101189, 13.007812],
 	    minZoom: 1,
@@ -16,7 +18,6 @@ $(document).on('ready',function (){
 
 	map.addLayer(mapaTopo);
 	map.locate({
-		watch:true,
 		enableHighAccuracy: true,
 		setView: true
 	})
@@ -26,6 +27,7 @@ $(document).on('ready',function (){
 		console.log(data);
 		var position = data.latlng;
 		user = L.marker([position.lat,position.lng]);
+		user.bindPopup('@'+nickname)
 		map.addLayer(user);
 		map.on('dragstart', function(){
 			map.stopLocate();
@@ -34,22 +36,14 @@ $(document).on('ready',function (){
 		})
 	}
 
-	function refreshLocation(){
-		map.removeLayer(user);
-		map.locate({
-			enableHighAccuracy: true,
-			setView: true
-		})
-	}
-	$('#elmas').on('click',function(){
+	$('#juego').on('click',function(){
 		map.addLayer(mapaGris);
 		map.removeLayer(mapaTopo)
 	})
 })
 function getPosition(){
 	map.locate({
-		enableHighAccuracy: true,
-		setView: true
+		enableHighAccuracy: true
 	})
 }
 

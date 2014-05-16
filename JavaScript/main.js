@@ -7,7 +7,7 @@ var mapaGris = L.tileLayer('http://openmapsurfer.uni-hd.de/tiles/roadsg/x={x}&y=
 var mapaTopo =  L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png');
 
 $(document).on('ready',function (){
-	nickname = window.prompt('Posa´t nom');
+	//nickname = window.prompt('Posa´t nom');
 	map = L.map('mapa', {
 	    center: [32.101189, 13.007812],
 	    minZoom: 1,
@@ -17,10 +17,10 @@ $(document).on('ready',function (){
 	})
 
 	map.addLayer(mapaTopo);
-	map.locate({
-		enableHighAccuracy: true,
-		setView: true
-	})
+	// map.locate({
+	// 	enableHighAccuracy: true,
+	// 	setView: true
+	// })
 	map.on('locationfound', onLocationFound);
 
 	function onLocationFound(data){
@@ -38,7 +38,8 @@ $(document).on('ready',function (){
 
 	$('#posicio').on('click',function(){
 		map.locate({
-			enableHighAccuracy : true
+			enableHighAccuracy: true,
+			setView: true
 		})
 	})
 	$('#joc').on('click',function(){

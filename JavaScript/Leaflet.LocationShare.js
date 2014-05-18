@@ -2,21 +2,21 @@ L.LocShare = {}
 var LS = L.LocShare
 LS.Send = {}
 LS.Send.Marker = {}
-LS.Send.Popup = L.popup().setContent('<div><input id="sendText" type="text" style="border-color:#a7a7a7;border:solid;border-width:2px;border-radius:5px;height:30px;" size="30" onkeyup="L.LocShare.Send.UpdateMessage( this )" placeholder="Escriu i comparteix"/></div><div style="height:35px;"><button style="border-style:solid;border-radius:5px;border-color:#3d94f6;float:right;color:white;background-color:#3d94f6;height:35px;font-size:15px;line-height:3px;margin:5px;" onclick="copyPrompt()">Compartir</button></div></div>')
+LS.Send.Popup = L.popup().setContent('<div><input id="sendText" type="text" style="border-color:#a7a7a7;border:solid;border-width:2px;border-radius:5px;height:30px;" size="30" onkeyup="L.LocShare.Send.UpdateMessage( this )" placeholder="Dixa un missatge"/></div><div style="height:35px;"><button style="border-style:solid;border-radius:5px;border-color:#3d94f6;float:right;color:white;background-color:#3d94f6;height:35px;font-size:15px;line-height:3px;margin:5px;" onclick="copyPrompt()">Compartir</button></div></div>')
 LS.Receive = {}
 LS.Receive.Marker = {}
 LS.Receive.Popup = L.popup()
 var sendIcon = L.icon({
   iconUrl: "images/circulo.svg",
   iconSize:     [20, 20], // size of the icon
-  iconAnchor:   [10, 30], // point of the icon which will correspond to marker's location
+  iconAnchor:   [12, 20], // point of the icon which will correspond to marker's location
   popupAnchor:  [0, -30] // point from which the popup should open relative to the iconAnchor
 })
 
-var receiveIcon = L.icon({
+receiveIcon = L.icon({
   iconUrl: "images/circulo.svg",
   iconSize:     [20, 20], // size of the icon
-  iconAnchor:   [10, 30], // point of the icon which will correspond to marker's location
+  iconAnchor:   [12, 20], // point of the icon which will correspond to marker's location
   popupAnchor:  [0, -30] // point from which the popup should open relative to the iconAnchor
 })
 
@@ -30,7 +30,7 @@ L.Map.addInitHook(function () {
 
 L.Control.ShareLocation = L.Control.extend({
     options: {
-        position: 'topleft',
+        position: 'bottomright',
         title: 'Share Location'
     },
 
@@ -40,7 +40,7 @@ L.Control.ShareLocation = L.Control.extend({
         this.link = L.DomUtil.create('a', 'leaflet-bar-part', container);
 //        var userIcon = L.DomUtil.create('i', 'fa fa-users fa-lg', this.link);
         var userIcon = L.DomUtil.create('img' , 'img-responsive' , this.link);
-        userIcon.src = 'images/messages.png'
+        userIcon.src = 'images/note4.svg';
         this.link.href = '#';
 
         L.DomEvent.on(this.link, 'click', this._click, this);
@@ -93,7 +93,7 @@ function getJsonFromUrl () {
 
 
 function copyPrompt() {
-  window.prompt("Send this location with: Ctrl+C, Enter", '' + 
+  window.prompt("Aqui tens la teua nota, copia el link i comparteixlo on vullgues", '' + 
                 location.origin + location.pathname + '?' + 
                 'lat' + '=' + LS.Send.lat + '&' +
                 'lng' + '=' + LS.Send.lng + '&' +
@@ -130,3 +130,13 @@ function setSendValues( result ){
   LS.Send.lat = result.lat;
   LS.Send.lng = result.lng; 
 }
+
+
+
+
+
+
+// mailto:triauncontacte@elquesigue.com?cc=bar@example.com&subject=Tens%una%nota%A%Puesto!&body=Wish%20you%20were%20here!
+
+
+

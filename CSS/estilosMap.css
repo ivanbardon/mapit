@@ -12,11 +12,15 @@ body {
 	position: absolute;
 }
 .botonera button {
-	width: 40px;
-	height: 40px;
+	width: 42px;
+	height: 42px;
 	border-radius: 50%;
 	background-color: transparent;
 	border: 1px solid black;
 	margin-left: 15px;
-	color: black;
+}
+.botonera img {
+	vertical-align: text-bottom;
+	width: 350%;
+	margin-left: -10px;
 }

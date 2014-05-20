@@ -1,5 +1,6 @@
 body {
 	font-size: 16px;
+	margin: 0, auto;
 }
 #mapa {
 	position: absolute;
@@ -7,20 +8,56 @@ body {
 	top: 0;
 	width: 100%;
 }
-.botonera {
-	bottom: 5px;
+.menu {
+	height: 100%;
+	width: 150px;
+	border: 1px dotted black;
 	position: absolute;
+	background-color: rgba(61, 148, 246, 0.6);
+	display: none;
+	color: white;
+	padding: 10px;
 }
-.botonera button {
+.menuBtn {
 	width: 42px;
 	height: 42px;
 	border-radius: 50%;
 	background-color: transparent;
 	border: 1px solid black;
-	margin-left: 15px;
+	float: right;
+	position: absolute;
+	bottom: 5px;
+	left: 10px;
+	font-weight: bolder;
+	text-align: top;
 }
-.botonera img {
+.menuBtnOff {
+	background-color: transparent;
+	border: none;
+	font-size: 32px;
+	text-align: top;
+	float: right;
+}
+.locationBtn {
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 1px solid black;
+	float: right;
+	position: absolute;
+	bottom: 5px;
+	left: 65px;
+}
+.locationBtn img {
 	vertical-align: text-bottom;
 	width: 350%;
 	margin-left: -10px;
 }
+.containerUsers {
+	height: 100px;
+}
+.listaUsers {
+	height: auto;
+}
+

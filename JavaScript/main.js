@@ -9,10 +9,10 @@ var mapaTopo =  L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/
 $(document).on('ready',function (){
 	//nickname = window.prompt('Posa´t nom');
 	map = L.map('mapa', {
-	    center: [32.101189, 13.007812],
+	    center: [46.195042, 4.833984],
 	    minZoom: 1,
 	    maxZoom:18,
-	    zoom: 2,
+	    zoom: 3,
 	    scrollWheelZoom: false,
 	    zoomControl: false
 	})
@@ -37,22 +37,22 @@ $(document).on('ready',function (){
 		})
 	}
 
-	$('#posicio').on('click',function(){
+	$('#locationBtn').on('click',function(){
 		map.locate({
 			enableHighAccuracy: true,
 			setView: true,
 			watch: true
 		})
 	})
-	$('#joc').on('click',function(){
-		map.addLayer(mapaGris);
-		map.removeLayer(mapaSat);
-		map.removeLayer(mapaTopo)
+	$('#menuBtn').on('click',function(){
+		$('#menu').animate({width:'toggle'},'fast');
+		$('#menuBtn').fadeOut(180)
+		$('#locationBtn').fadeOut(180)
 	})
-	$('#mapaSat').on('click',function(){
-		map.addLayer(mapaSat)
-		map.removeLayer(mapaGris);
-		map.removeLayer(mapaTopo)
+	$('#menuBtnOff').on('click',function(){
+		$('#menu').animate({width:'toggle'},'fast');
+		$('#menuBtn').fadeIn()
+		$('#locationBtn').fadeIn()
 	})
 
 })

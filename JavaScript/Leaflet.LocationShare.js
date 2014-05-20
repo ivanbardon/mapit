@@ -30,8 +30,8 @@ L.Map.addInitHook(function () {
 
 L.Control.ShareLocation = L.Control.extend({
     options: {
-        position: 'bottomright',
-        title: 'Share Location'
+        position: 'topright',
+        title: 'Dixar una nota'
     },
 
     onAdd: function () {
@@ -40,7 +40,7 @@ L.Control.ShareLocation = L.Control.extend({
         this.link = L.DomUtil.create('a', 'leaflet-bar-part', container);
 //        var userIcon = L.DomUtil.create('i', 'fa fa-users fa-lg', this.link);
         var userIcon = L.DomUtil.create('img' , 'img-responsive' , this.link);
-        userIcon.src = 'images/note4.svg';
+        userIcon.src = 'images/notes.svg';
         this.link.href = '#';
 
         L.DomEvent.on(this.link, 'click', this._click, this);
@@ -98,6 +98,7 @@ function copyPrompt() {
                 'lat' + '=' + LS.Send.lat + '&' +
                 'lng' + '=' + LS.Send.lng + '&' +
                  'M' + '=' +  LS.Send.Message);
+  return a;
 }
 
 function placeMarker( selectedMap ){

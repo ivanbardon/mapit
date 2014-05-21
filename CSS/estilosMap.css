@@ -70,7 +70,8 @@ body {
 	margin-left: -10px;
 }
 .containerUsers {
-	height: 100px;
+	height: 40px;
+	width: 80%;
 }
 .listaUsers {
 	height: auto;

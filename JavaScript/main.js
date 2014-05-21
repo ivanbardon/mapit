@@ -7,7 +7,6 @@ var mapaGris = L.tileLayer('http://openmapsurfer.uni-hd.de/tiles/roadsg/x={x}&y=
 var mapaTopo =  L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png');
 
 $(document).on('ready',function (){
-	//nickname = window.prompt('Posa´t nom');
 	map = L.map('mapa', {
 	    center: [46.195042, 4.833984],
 	    minZoom: 1,
@@ -18,10 +17,7 @@ $(document).on('ready',function (){
 	})
 
 	map.addLayer(mapaTopo);
-	// map.locate({
-	// 	enableHighAccuracy: true,
-	// 	setView: true
-	// })
+
 	map.on('locationfound', onLocationFound);
 
 	function onLocationFound(data){
@@ -56,6 +52,13 @@ function menuBtn(){
 	$('#locationBtn').fadeOut(180)
 }
 function localitzar(){
+	nickname = window.prompt('Posa´t nom',localStorage.getItem.user);
+	var listUsers = document.getElementById('listaUsers');
+	listUsers.innerHTML='@ '+nickname;
+	if (localStorage) {
+		localStorage.setItem('user',nickname)
+	};
+
 	map.locate({
 		enableHighAccuracy: true,
 		setView: true,

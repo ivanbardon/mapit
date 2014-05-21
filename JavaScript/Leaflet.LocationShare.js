@@ -21,40 +21,41 @@ receiveIcon = L.icon({
 })
 
 L.Map.addInitHook(function () {
-  this.sharelocationControl = new L.Control.ShareLocation();
-  this.addControl(this.sharelocationControl);
+  // this.sharelocationControl = new L.Control.ShareLocation();
+  // this.addControl(this.sharelocationControl);
   this.whenReady( function(){
     populateMarker(this);
   })
 });
 
-L.Control.ShareLocation = L.Control.extend({
-    options: {
-        position: 'topright',
-        title: 'Dixar una nota'
-    },
+// L.Control.ShareLocation = L.Control.extend({
+//     options: {
+//         position: 'topright',
+//         title: 'Dixar una nota'
+//     },
+//     onAdd: function () {
+//         var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
 
-    onAdd: function () {
-        var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
+//         this.link = L.DomUtil.create('a', 'leaflet-bar-part', container);
+// //        var userIcon = L.DomUtil.create('i', 'fa fa-users fa-lg', this.link);
+//         var userIcon = L.DomUtil.create('img' , 'img-responsive' , this.link);
+//         userIcon.src = 'images/notes.svg';
+//         this.link.href = '#';
 
-        this.link = L.DomUtil.create('a', 'leaflet-bar-part', container);
-//        var userIcon = L.DomUtil.create('i', 'fa fa-users fa-lg', this.link);
-        var userIcon = L.DomUtil.create('img' , 'img-responsive' , this.link);
-        userIcon.src = 'images/notes.svg';
-        this.link.href = '#';
+//         L.DomEvent.on(this.link, 'click', this._click, this);
 
-        L.DomEvent.on(this.link, 'click', this._click, this);
+//         return container;
+//     },
 
-        return container;
-    },
+//     _click: function (e) {
+//       L.DomEvent.stopPropagation(e);
+//       L.DomEvent.preventDefault(e);
+// //        TODO: get location and putout url
+//       placeMarker( this._map )
+//     },
+// });
 
-    _click: function (e) {
-      L.DomEvent.stopPropagation(e);
-      L.DomEvent.preventDefault(e);
-//        TODO: get location and putout url
-      placeMarker( this._map )
-    },
-});
+
 
 populateMarker = function (selectedMap) {
   // replace the line below with the results of any Url parser
@@ -97,8 +98,7 @@ function copyPrompt() {
                 location.origin + location.pathname + '?' + 
                 'lat' + '=' + LS.Send.lat + '&' +
                 'lng' + '=' + LS.Send.lng + '&' +
-                 'M' + '=' +  LS.Send.Message);
-  return a;
+                 'M' + '=' +  LS.Send.Message)
 }
 
 function placeMarker( selectedMap ){
@@ -106,7 +106,7 @@ function placeMarker( selectedMap ){
 //  if ( isFinite(test.lat) && isFinite(test.lng) ){
     if (!LS.Send.Marker._latlng ) {
       console.log('if (!LS.Send.Marker._latlng ) { passed!  line 95')
-      LS.Send.Marker = L.marker( selectedMap.getCenter() , {draggable: true,icon: sendIcon} );
+      LS.Send.Marker = L.marker( selectedMap.getCenter() , {draggable: true, icon: sendIcon} );
       setSendValues( selectedMap.getCenter() )
       LS.Send.Marker.on('dragend', function(event) {
         setSendValues( event.target.getLatLng());
@@ -137,7 +137,6 @@ function setSendValues( result ){
 
 
 
-// mailto:triauncontacte@elquesigue.com?cc=bar@example.com&subject=Tens%una%nota%A%Puesto!&body=Wish%20you%20were%20here!
 
 
 

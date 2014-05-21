@@ -37,27 +37,31 @@ $(document).on('ready',function (){
 		})
 	}
 
-	$('#locationBtn').on('click',function(){
-		map.locate({
-			enableHighAccuracy: true,
-			setView: true,
-			watch: true
-		})
-	})
-	$('#menuBtn').on('click',function(){
-		$('#menu').animate({width:'toggle'},'fast');
-		$('#menuBtn').fadeOut(180)
-		$('#locationBtn').fadeOut(180)
-	})
-	$('#menuBtnOff').on('click',function(){
-		$('#menu').animate({width:'toggle'},'fast');
-		$('#menuBtn').fadeIn()
-		$('#locationBtn').fadeIn()
-	})
+	$('#locationBtn').on('click',localitzar)
+
+	$('#menuBtn').on('click',menuBtn)
+
+	$('#menuBtnOff').on('click',menuBtnOff)
+	
 
 })
-
-
+function menuBtnOff(){
+	$('#menu').animate({width:'toggle'},'fast');
+	$('#menuBtn').fadeIn();
+	$('#locationBtn').fadeIn()
+}
+function menuBtn(){
+	$('#menu').animate({width:'toggle'},'fast');
+	$('#menuBtn').fadeOut(180);
+	$('#locationBtn').fadeOut(180)
+}
+function localitzar(){
+	map.locate({
+		enableHighAccuracy: true,
+		setView: true,
+		watch: true
+	})
+}
 
 
 

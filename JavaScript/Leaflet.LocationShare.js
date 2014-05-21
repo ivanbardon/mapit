@@ -107,7 +107,7 @@ function copyPrompt() {
     'lng' + '=' + LS.Send.lng + '&' +
      'M' + '=' +  LS.Send.Message;
 
-     console.log(t)
+  console.log(t)
 } 
           
 

@@ -1,4 +1,5 @@
 L.LocShare = {}
+var note;
 var LS = L.LocShare
 LS.Send = {}
 LS.Send.Marker = {}
@@ -102,12 +103,17 @@ function getJsonFromUrl () {
 // }
 
 function copyPrompt() {
-  var t = location.origin + location.pathname + '?' + 
+  menuBtnOff();
+  var el = document.getElementById('linkNotas');
+  note = location.origin + location.pathname + '?' + 
     'lat' + '=' + LS.Send.lat + '&' +
     'lng' + '=' + LS.Send.lng + '&' +
-     'M' + '=' +  LS.Send.Message;
+     'M' + '=' +  LS.Send.Message
+  console.log(note);
+  el.href = note;
+  el.innerText = 'Manten pulsado para compartir la nota'
 
-  console.log(t)
+
 } 
           
 

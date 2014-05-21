@@ -93,13 +93,24 @@ function getJsonFromUrl () {
 }
 
 
+// function copyPrompt() {
+//   window.prompt("Aqui tens la teua nota, copia el link i comparteixlo on vullgues", '' + 
+//                 location.origin + location.pathname + '?' + 
+//                 'lat' + '=' + LS.Send.lat + '&' +
+//                 'lng' + '=' + LS.Send.lng + '&' +
+//                  'M' + '=' +  LS.Send.Message)
+// }
+
 function copyPrompt() {
-  window.prompt("Aqui tens la teua nota, copia el link i comparteixlo on vullgues", '' + 
-                location.origin + location.pathname + '?' + 
-                'lat' + '=' + LS.Send.lat + '&' +
-                'lng' + '=' + LS.Send.lng + '&' +
-                 'M' + '=' +  LS.Send.Message)
-}
+  var t = location.origin + location.pathname + '?' + 
+    'lat' + '=' + LS.Send.lat + '&' +
+    'lng' + '=' + LS.Send.lng + '&' +
+     'M' + '=' +  LS.Send.Message;
+
+     console.log(t)
+} 
+          
+
 
 function placeMarker( selectedMap ){
 //  var test = LS.Send.Marker._latlng

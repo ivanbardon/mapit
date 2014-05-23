@@ -42,12 +42,12 @@ $(document).on('ready',function (){
 
 })
 function menuBtnOff(){
-	$('#menu').animate({width:'toggle'},'fast');
+	$('#menu').animate({height:'toggle'},'fast');
 	$('#menuBtn').fadeIn();
 	$('#locationBtn').fadeIn()
 }
 function menuBtn(){
-	$('#menu').animate({width:'toggle'},'fast');
+	$('#menu').animate({height:'toggle'},'fast');
 	$('#menuBtn').fadeOut(180);
 	$('#locationBtn').fadeOut(180)
 }

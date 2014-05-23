@@ -13,35 +13,25 @@
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
   <link rel="stylesheet" href="CSS/estilosMap.css">
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,700' rel='stylesheet' type='text/css'>
-  <title>Anonymous</title>
+  <title>GeoLab</title>
 </head>
 <body>
-
-  <div id="mapa"></div>
-  <button id="menuBtn" class="menuBtn">···</button>
-  <button id="locationBtn" class="locationBtn"><img src="images/location.svg" alt="locationIcon"></button>
-  <div id="menu" class="menu">
-    <!-- <button id="menuBtnOff" class="menuBtnOff">&laquo</button> -->
-    <div class="usuariosConec">
-      <h3>Usuarios conectados</h3>
-      <div class="containerUsers">
-        <div id="listaUsers" class="listaUsers"></div>
-      </div>
+  <header>
+    <h1>geoLab</h1>
+    <div id="btnMenu" class="btnMenu"></div>
+    <div id="menu" class="menu">
+      <ul>
+        <li>UNO</li>
+        <li>DOS</li>
+        <li>TRES</li>
+        <li>CUATRO</li>
+        <li>CINCO</li>
+      </ul>
     </div>
-    <button type="button" id="btnNotas" class="btnNotas">
-      <a href="javascript:placeMarker(map),menuBtnOff()">Dixar una Nota</a>
-    </button>
-    <button type="button" id="btnLinkNotas" class="btnLinkNotas">
-      <a href="#" id="linkNotas" class="linkNotas"></a>
-    </button>
-    
-  </div>
-
-  
+  </header>
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
-  <script src="JavaScript/Leaflet.LocationShare.js"></script>
-  <script src="JavaScript/main.js"></script>
+  <script src="JavaScript/home.js"></script>
 </body>
 </html>

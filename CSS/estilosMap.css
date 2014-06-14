@@ -4,86 +4,46 @@ body {
 #mapa {
 	position: absolute;
 	height: 100%;
-	top: 0;
+	bottom: 0;
 	width: 100%;
 }
-#btnNotas {
-	background-color: black;
-	width: 100%;
-	padding: 10px;
-
-}
-.btnNotas a {
-	color: white;
-	text-decoration: none;
-}
-.menu {
-	height: auto;
-	width: 100%;
-	border: 1px dotted black;
-	position: absolute;
-	background-color: rgba(3, 3, 3, 0.8);
-	display: none;
-	color: white;
-	top: 0px;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-.menuBtn {
-	width: 42px;
-	height: 42px;
-	border-radius: 50%;
-	background-color: transparent;
-	border: 1px solid black;
-	float: right;
-	position: absolute;
-	bottom: 5px;
-	left: 10px;
-	text-align: top;
-}
-.menuBtnOff {
-	background-color: transparent;
-	border: none;
-	font-size: 42px;
-	float: left;
-	margin-left: -15px;
-}
-.btnLinkNotas {
-	background-color: black;
-	width: 100%;
-	padding: 10px;
-	margin-top: 10px;
-
-}
-.linkNotas {
-	color: white;
-	text-decoration: none;
-}
-.locationBtn {
-	width: 42px;
-	height: 42px;
-	border-radius: 50%;
-	background-color: transparent;
-	border: 1px solid black;
-	float: right;
-	position: absolute;
-	bottom: 5px;
-	left: 65px;
-}
-.locationBtn img {
-	vertical-align: text-bottom;
-	width: 350%;
-	margin-left: -10px;
-}
-.containerUsers {
-	height: 40px;
+#menuNotas {
+	height: 70%;
 	width: 80%;
+	padding: 5px;
+	position: absolute;
+	top: 15%;
+	left: 8%;
+	background-color: rgba(255,255,255, 1);
+	display: none;
+	border: 1px solid black;
 }
-.listaUsers {
-	height: auto;
-}
-.usuariosConec {
+#menuNotas p {
+	padding: 15px;
 	text-align: center;
-	width: 100%;
+	font-size: 1.2em;
 }
+#cajaBtnNotas {
+	position: absolute;
+	top: 70%;
+	left: 25%;
+}
+#cajaBtnNotas a button {
+	border-radius: 5px;
+	background-color: #3d94f6;
+	padding: 15px;
+	font-weight: lighter;
+	letter-spacing: 1.5px;
+
+}
+#cajaBtnNotas a {
+	text-decoration: none;
+	color: white;
+}
+#btnCerrar {
+	cursor: pointer;
+	font-size: 1.2em;
+	font-weight: lighter;
+}
+
 

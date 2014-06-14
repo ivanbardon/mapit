@@ -13,35 +13,30 @@
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
   <link rel="stylesheet" href="CSS/estilosMap.css">
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="CSS/L.Control.Locate.css" />
+  <!--[if lt IE 9]>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.ie.css" />
+    <link rel="stylesheet" href="CSS/L.Control.Locate.ie.css"/>
+    <![endif]-->
   <title>Anonymous</title>
 </head>
 <body>
 
   <div id="mapa"></div>
-  <button id="menuBtn" class="menuBtn">···</button>
-  <button id="locationBtn" class="locationBtn"><img src="images/location.svg" alt="locationIcon"></button>
-  <div id="menu" class="menu">
-    <!-- <button id="menuBtnOff" class="menuBtnOff">&laquo</button> -->
-    <div class="usuariosConec">
-      <h3>Usuarios conectados</h3>
-      <div class="containerUsers">
-        <div id="listaUsers" class="listaUsers"></div>
-      </div>
+  <div id="menuNotas">
+    <div id="btnCerrar">X</div>
+    <p>Un punto en el mapa, una nota asociada</p>
+    <p>Mantén pulsado el boton y ya tienes el link de tu nota, puedes guardarlo o compartirlo</p>
+    <div id="cajaBtnNotas">
+      <a id="btnNotas" href="#"><button type="button">UnPunto1Nota</button></a>
     </div>
-    <button type="button" id="btnNotas" class="btnNotas">
-      <a href="javascript:placeMarker(map),menuBtnOff()">Dixar una Nota</a>
-    </button>
-    <button type="button" id="btnLinkNotas" class="btnLinkNotas">
-      <a href="#" id="linkNotas" class="linkNotas"></a>
-    </button>
-    
   </div>
-
   
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
   <script src="JavaScript/Leaflet.LocationShare.js"></script>
+  <script src="JavaScript/L.Control.Locate.js" ></script>
   <script src="JavaScript/main.js"></script>
 </body>
 </html>

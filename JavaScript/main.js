@@ -1,9 +1,7 @@
 var map;
-var user;
-var nickname;
 var mapaNormal = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 var mapaSat = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png');
-var mapaGris = L.tileLayer('http://openmapsurfer.uni-hd.de/tiles/roadsg/x={x}&y={y}&z={z}');
+var mapaGris = L.tileLayer('http://{s}.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png');
 var mapaTopo =  L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png');
 
 $(document).on('ready',function (){
@@ -16,55 +14,21 @@ $(document).on('ready',function (){
 	    zoomControl: false
 	})
 
-	map.addLayer(mapaTopo);
+	map.addLayer(mapaGris);
 
-	map.on('locationfound', onLocationFound);
+	lc = L.control.locate({
+		follow: true
+	}).addTo(map);
 
-	function onLocationFound(data){
-		console.log(data);
-		var position = data.latlng;
-		user = L.circleMarker([position.lat,position.lng]);
-		user.bindPopup('@ '+nickname);
-		map.addLayer(user);
-		map.on('dragstart', function(){
-			map.stopLocate();
-			map.removeLayer(user);
-			console.log('locate is off')
-		})
-	}
-
-	$('#locationBtn').on('click',localitzar)
-
-	$('#menuBtn').on('click',menuBtn)
-
-	$('#menuBtnOff').on('click',menuBtnOff)
-	
-
-})
-function menuBtnOff(){
-	$('#menu').animate({height:'toggle'},'fast');
-	$('#menuBtn').fadeIn();
-	$('#locationBtn').fadeIn()
-}
-function menuBtn(){
-	$('#menu').animate({height:'toggle'},'fast');
-	$('#menuBtn').fadeOut(180);
-	$('#locationBtn').fadeOut(180)
-}
-function localitzar(){
-	nickname = window.prompt('Posa´t nom',localStorage.getItem.user);
-	var listUsers = document.getElementById('listaUsers');
-	listUsers.innerHTML='@ '+nickname;
-	if (localStorage) {
-		localStorage.setItem('user',nickname)
-	};
-
-	map.locate({
-		enableHighAccuracy: true,
-		setView: true,
-		watch: true
+	map.on('startfollowing', function() {
+	    map.on('dragstart', lc.stopFollowing);
+	}).on('stopfollowing', function() {
+	    map.off('dragstart', lc.stopFollowing);
 	})
-}
+	$('#btnCerrar').on('click', function(){
+		$('#menuNotas').fadeToggle();
+	})
+})
 
 
 

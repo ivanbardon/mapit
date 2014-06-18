@@ -73,7 +73,11 @@ populateMarker = function (selectedMap) {
     console.log( LS.Receive.Marker._latlng );
     LS.Receive.Marker.bindPopup(LS.Receive.message);
     LS.Receive.Marker.addTo(selectedMap);
-    LS.Receive.Marker.openPopup();  
+    LS.Receive.Marker.openPopup();
+    selectedMap.setView({
+      "lat": intermediate.lat,
+      "lng": intermediate.lng
+    },16)
   } 
 }
 

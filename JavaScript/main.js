@@ -10,11 +10,11 @@ $(document).on('ready',function (){
 	    minZoom: 1,
 	    maxZoom:18,
 	    zoom: 3,
-	    scrollWheelZoom: false,
+	    scrollWheelZoom: true,
 	    zoomControl: false
 	})
 
-	map.addLayer(mapaGris);
+	map.addLayer(mapaTopo);
 
 	lc = L.control.locate({
 		follow: true

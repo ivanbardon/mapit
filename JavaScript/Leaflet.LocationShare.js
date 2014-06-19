@@ -31,7 +31,7 @@ L.Map.addInitHook(function () {
 
 L.Control.ShareLocation = L.Control.extend({
     options: {
-        position: 'topleft',
+        position: 'bottomleft',
         title: 'Dixar una nota'
     },
     onAdd: function () {

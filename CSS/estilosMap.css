@@ -39,4 +39,14 @@ body {
 	display: inline-block;
 	margin-top: 20px;
 }
-
+.btnMain {
+	width: 40px;
+	border-radius: 50%;
+	height: 40px;
+	border: 1px solid black;
+	cursor: pointer;
+}
+.btnNotas {
+	margin-left: 5px;
+	padding: 0px 5px 5px 5px;
+}

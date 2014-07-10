@@ -14,7 +14,7 @@ $(document).on('ready',function (){
 	    zoomControl: false
 	})
 
-	map.addLayer(mapaTopo);
+	map.addLayer(mapaNormal);
 
 	lc = L.control.locate({
 		follow: true

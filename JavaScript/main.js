@@ -10,7 +10,7 @@ $(document).on('ready',function (){
 	    minZoom: 1,
 	    maxZoom:18,
 	    zoom: 3,
-	    scrollWheelZoom: true,
+	    scrollWheelZoom: false,
 	    zoomControl: false
 	})
 

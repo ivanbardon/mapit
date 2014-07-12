@@ -3,22 +3,22 @@ var note;
 var LS = L.LocShare;
 LS.Send = {};
 LS.Send.Marker = {};
-LS.Send.Popup = L.popup().setContent('<div><input id="sendText" type="text" style="border-color:#a7a7a7;border:solid;border-width:2px;border-radius:5px;height:30px;" size="30" onkeyup="L.LocShare.Send.UpdateMessage( this )" placeholder="Deja tu mensaje"/></div><div style="height:35px;"><button style="border-style:solid;border-radius:5px;border-color:#3d94f6;float:right;color:white;background-color:#3d94f6;height:35px;font-size:15px;line-height:3px;margin:5px;" onclick="copyPrompt()">Compartir</button></div></div>');
+LS.Send.Popup = L.popup().setContent('<div><input id="sendText" type="text" style="border-color:#a7a7a7;border:solid;border-width:1px;border-radius:5px;height:30px;" size="30" onkeyup="L.LocShare.Send.UpdateMessage( this )" placeholder="Deja tu mensaje"/></div><div style="height:35px;"><button style="border-style:solid;border-radius:5px;border-color:#3d94f6;float:right;color:white;background-color:#3d94f6;height:25px;font-size:15px;line-height:3px;margin:5px;" onclick="copyPrompt()">Compartir</button></div></div>');
 LS.Receive = {};
 LS.Receive.Marker = {};
 LS.Receive.Popup = L.popup();
 var sendIcon = L.icon({
-  iconUrl: "images/circulo.svg",
-  iconSize:     [20, 20], // size of the icon
+  iconUrl: "images/marcador.svg",
+  iconSize:     [25, 25], // size of the icon
   iconAnchor:   [12, 20], // point of the icon which will correspond to marker's location
-  popupAnchor:  [0, -30] // point from which the popup should open relative to the iconAnchor
+  popupAnchor:  [3, -30] // point from which the popup should open relative to the iconAnchor
 });
 
 receiveIcon = L.icon({
-  iconUrl: "images/circulo.svg",
-  iconSize:     [20, 20], // size of the icon
+  iconUrl: "images/marcador.svg",
+  iconSize:     [25, 25], // size of the icon
   iconAnchor:   [12, 20], // point of the icon which will correspond to marker's location
-  popupAnchor:  [0, -30] // point from which the popup should open relative to the iconAnchor
+  popupAnchor:  [3, -30] // point from which the popup should open relative to the iconAnchor
 });
 
 L.Map.addInitHook(function () {
@@ -35,11 +35,11 @@ L.Control.ShareLocation = L.Control.extend({
         title: 'Dixar una nota'
     },
     onAdd: function () {
-        var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
+        var container = L.DomUtil.create('div', 'btnMain');
 
-        this.link = L.DomUtil.create('a', 'leaflet-bar-part', container);
+        this.link = L.DomUtil.create('a', 'leaflet-bar-part dreta', container);
 //        var userIcon = L.DomUtil.create('i', 'fa fa-users fa-lg', this.link);
-        var userIcon = L.DomUtil.create('img' , 'img-responsive' , this.link);
+        var userIcon = L.DomUtil.create('img' , 'img-responsive btnNotas' , this.link);
         userIcon.src = 'images/notes2.png';
         this.link.href = '#';
 

@@ -9,14 +9,14 @@ LS.Receive.Marker = {};
 LS.Receive.Popup = L.popup();
 var sendIcon = L.icon({
   iconUrl: "images/marcador.svg",
-  iconSize:     [30, 30], // size of the icon
+  iconSize:     [25, 25], // size of the icon
   iconAnchor:   [12, 20], // point of the icon which will correspond to marker's location
   popupAnchor:  [3, -30] // point from which the popup should open relative to the iconAnchor
 });
 
 receiveIcon = L.icon({
   iconUrl: "images/marcador.svg",
-  iconSize:     [30, 30], // size of the icon
+  iconSize:     [25, 25], // size of the icon
   iconAnchor:   [12, 20], // point of the icon which will correspond to marker's location
   popupAnchor:  [3, -30] // point from which the popup should open relative to the iconAnchor
 });
@@ -37,9 +37,9 @@ L.Control.ShareLocation = L.Control.extend({
     onAdd: function () {
         var container = L.DomUtil.create('div', 'btnMain');
 
-        this.link = L.DomUtil.create('a', 'leaflet-bar-part btnNotas', container);
+        this.link = L.DomUtil.create('a', 'leaflet-bar-part dreta', container);
 //        var userIcon = L.DomUtil.create('i', 'fa fa-users fa-lg', this.link);
-        var userIcon = L.DomUtil.create('img' , 'img-responsive' , this.link);
+        var userIcon = L.DomUtil.create('img' , 'img-responsive btnNotas' , this.link);
         userIcon.src = 'images/notes2.png';
         this.link.href = '#';
 

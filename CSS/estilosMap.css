@@ -31,7 +31,7 @@ body {
 }
 #btnCerrar {
 	cursor: pointer;
-	font-size: 1.2em;
+	font-size: 3em;
 	font-weight: lighter;
 	float: left;
 }

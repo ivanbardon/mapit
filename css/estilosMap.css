@@ -8,7 +8,7 @@ body {
 	width: 100%;
 }
 #modalNotas {
-	height: 80%;
+	height: 75%;
 	width: 80%;
 	padding: 5px;
 	position: absolute;
@@ -24,20 +24,27 @@ body {
 	font-size: 1.2em;
 }
 #cajaBtnNotas {
-	text-align: center;
-}
-#cajaBtnNotas a {
-	color: black;
+	margin-top: 35%;
 }
 #btnCerrar {
 	cursor: pointer;
 	font-size: 3em;
 	font-weight: lighter;
 	float: left;
+	padding: 5px 20px 5px 5px;
 }
 .btnSocial {
 	display: inline-block;
-	margin-top: 20px;
+	margin-left: 40px;
+}
+.btnSocial img {
+	width: 200%;
+	height: auto;
+	margin-top: 30px;
+}
+.peq {
+	width: 6%;
+	height: auto;
 }
 .btnMain {
 	width: 40px;

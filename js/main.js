@@ -1,5 +1,6 @@
+var token = "pk.eyJ1IjoiYmFyZG9uIiwiYSI6Ildqa244YmsifQ.l9SDZtn80obOkqlXzBEP7Q";
 var map;
-var mapaNormal = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+var mapaNormal = L.tileLayer('http://api.tiles.mapbox.com/v4/bardon.ipgdabm2/{z}/{x}/{y}.png?access_token='+token);
 var mapaSat = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png');
 var mapaGris = L.tileLayer('http://{s}.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png');
 var mapaTopo =  L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png');
@@ -10,11 +11,11 @@ $(document).on('ready',function (){
 	    minZoom: 1,
 	    maxZoom:18,
 	    zoom: 3,
-	    scrollWheelZoom: false,
+	    scrollWheelZoom: true,
 	    zoomControl: false
 	})
 
-	map.addLayer(mapaGris);
+	map.addLayer(mapaNormal);
 
 	lc = L.control.locate({
 		follow: true
@@ -26,10 +27,9 @@ $(document).on('ready',function (){
 	    map.off('dragstart', lc.stopFollowing);
 	})
 	$('#btnCerrar').on('click', function(){
-		$('#menuNotas').fadeToggle();
+		$('#modalNotas').fadeToggle();
 	})
 })
-
 
 
 

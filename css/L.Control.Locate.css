@@ -14,11 +14,11 @@
 }
 
 .leaflet-control-locate.active a {
-	color: #265B86;
+	color: red;
 }
 
 .leaflet-control-locate.active.following a {
-	color: blue;
+	color: orange;
 }
 
 .leaflet-touch .leaflet-control-locate {

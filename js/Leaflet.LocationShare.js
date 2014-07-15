@@ -37,7 +37,7 @@ L.Control.ShareLocation = L.Control.extend({
     onAdd: function () {
         var container = L.DomUtil.create('div', 'btnMain');
 
-        this.link = L.DomUtil.create('a', 'leaflet-bar-part dreta', container);
+        this.link = L.DomUtil.create('a', 'leaflet-bar-part', container);
 //        var userIcon = L.DomUtil.create('i', 'fa fa-users fa-lg', this.link);
         var userIcon = L.DomUtil.create('img' , 'img-responsive btnNotas' , this.link);
         userIcon.src = 'images/notes2.png';
@@ -115,7 +115,7 @@ function copyPrompt() {
   console.log(note);
   el.href = note;
   map.closePopup();
-  $('#menuNotas').fadeToggle();
+  $('#modalNotas').fadeToggle();
 
 } 
           

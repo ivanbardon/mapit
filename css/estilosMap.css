@@ -43,13 +43,10 @@ body {
 	width: 40px;
 	border-radius: 50%;
 	height: 40px;
-	border: 1px dotted black;
+	border: 1px solid white;
 	cursor: pointer;
 }
 .btnNotas {
 	margin-top: 8px;
 	margin-left: 8px;
-}
-.dreta {
-	background-clip: padding-box;
 }

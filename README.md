@@ -1,0 +1,1 @@
+Thanks to <a href="https://github.com/CliffCloud">Dann CliffCloud</a> developer of LocationShare.

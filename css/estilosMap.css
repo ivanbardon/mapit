@@ -1,0 +1,55 @@
+body {
+	font-family: 'Lato', sans-serif;
+}
+#mapa {
+	position: absolute;
+	height: 100%;
+	bottom: 0;
+	width: 100%;
+}
+#modalNotas {
+	height: 80%;
+	width: 80%;
+	padding: 5px;
+	position: absolute;
+	top: 15px;
+	left: 8%;
+	background-color: rgba(255,255,255, 1);
+	display: none;
+	border: 1px solid black;
+}
+#modalNotas p {
+	padding: 15px;
+	text-align: center;
+	font-size: 1.2em;
+}
+#cajaBtnNotas {
+	text-align: center;
+}
+#cajaBtnNotas a {
+	color: black;
+}
+#btnCerrar {
+	cursor: pointer;
+	font-size: 3em;
+	font-weight: lighter;
+	float: left;
+}
+.btnSocial {
+	display: inline-block;
+	margin-top: 20px;
+}
+.btnMain {
+	width: 40px;
+	border-radius: 50%;
+	height: 40px;
+	border: 1px dotted black;
+	cursor: pointer;
+}
+.btnNotas {
+	margin-top: 8px;
+	margin-left: 8px;
+}
+.dreta {
+	background-clip: padding-box;
+}

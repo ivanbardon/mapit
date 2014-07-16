@@ -8,17 +8,17 @@ LS.Receive = {};
 LS.Receive.Marker = {};
 LS.Receive.Popup = L.popup();
 var sendIcon = L.icon({
-  iconUrl: "images/marcador.svg",
-  iconSize:     [25, 25], // size of the icon
-  iconAnchor:   [12, 20], // point of the icon which will correspond to marker's location
-  popupAnchor:  [3, -30] // point from which the popup should open relative to the iconAnchor
+  iconUrl: "images/marcador.png",
+  iconSize:     [25, 30], // size of the icon
+  iconAnchor:   [15, 20], // point of the icon which will correspond to marker's location
+  popupAnchor:  [3, -25]// point from which the popup should open relative to the iconAnchor
 });
 
 receiveIcon = L.icon({
-  iconUrl: "images/marcador.svg",
-  iconSize:     [25, 25], // size of the icon
-  iconAnchor:   [12, 20], // point of the icon which will correspond to marker's location
-  popupAnchor:  [3, -30] // point from which the popup should open relative to the iconAnchor
+  iconUrl: "images/marcador.png",
+  iconSize:     [25, 30], // size of the icon
+  iconAnchor:   [15, 20], // point of the icon which will correspond to marker's location
+  popupAnchor:  [3, -25] // point from which the popup should open relative to the iconAnchor
 });
 
 L.Map.addInitHook(function () {
@@ -116,6 +116,7 @@ function copyPrompt() {
   el.href = note;
   map.closePopup();
   $('#modalNotas').fadeToggle();
+  $('.btnMain').fadeOut();
 
 } 
           

@@ -28,6 +28,7 @@ $(document).on('ready',function (){
 	})
 	$('#btnCerrar').on('click', function(){
 		$('#modalNotas').fadeToggle();
+		$('.btnMain').fadeIn();
 	})
 })
 

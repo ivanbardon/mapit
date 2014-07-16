@@ -9,7 +9,7 @@
 .leaflet-control-locate a {
 	font-size: 2.2em;
 	margin-left: 1px;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -23,6 +23,6 @@
 
 .leaflet-touch .leaflet-control-locate {
 	box-shadow: none;
-	border: 2px solid rgba(0,0,0,0.2);
+	border: 1px solid white;
 	background-clip: padding-box;
 }

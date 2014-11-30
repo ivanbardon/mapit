@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Map.it" >
+  <meta name="description" content="Mapit" >
   <meta name="author" content="Ivan Bardon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="mobile-web-app-capable" content="yes">
@@ -22,9 +22,14 @@
 </head>
 <body>
 
+  <section id="modalStart">
+    <img src="images/logo1.svg" alt="logo" />
+    <p>·mapit·</p>
+  </section>
+
   <div id="mapa"></div>
-  <!-- <div id="modalStart"></div> -->
-  <div id="modalNotas">
+
+  <section id="modalNotas">
     <div id="btnCerrar">&laquo</div>
     <div id="cajaBtnNotas">
       <p>Mantén pulsado el icono <img src="images/shareIcon.svg" alt="share">para copiar la nota</p>
@@ -32,7 +37,7 @@
       <div class="btnSocial"><img src="images/fbIcon.svg" alt="facebook"></div>
       <a id="btnNotas" href="#"><div class="btnSocial peq"><img src="images/shareIcon.svg" alt="share"></div></a>
     </div>
-  </div>
+  </section>
   
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

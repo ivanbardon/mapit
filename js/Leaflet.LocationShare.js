@@ -3,22 +3,22 @@ var note;
 var LS = L.LocShare;
 LS.Send = {};
 LS.Send.Marker = {};
-LS.Send.Popup = L.popup().setContent('<div><input id="sendText" type="text" style="border-color:#a7a7a7;border:solid;border-width:1px;border-radius:5px;height:30px;" size="30" onkeyup="L.LocShare.Send.UpdateMessage( this )" placeholder="Deja tu mensaje"/></div><div style="height:35px;"><button style="border-style:solid;border-radius:5px;border-color:#3d94f6;float:right;color:white;background-color:#3d94f6;height:25px;font-size:15px;line-height:3px;margin:5px;" onclick="copyPrompt()">Compartir</button></div></div>');
+LS.Send.Popup = L.popup().setContent('<div><input id="sendText" type="text" style="border-color:#a7a7a7;border:solid;border-width:1px;border-radius:5px;height:30px;" size="30" onkeyup="L.LocShare.Send.UpdateMessage( this )" placeholder=""/></div><div style="height:35px;"><button style="border-style:solid;border-radius:5px;border-color:#3d94f6;float:right;color:white;background-color:#3d94f6;height:25px;font-size:15px;line-height:3px;margin:5px;" onclick="copyPrompt()">Compartir</button></div></div>');
 LS.Receive = {};
 LS.Receive.Marker = {};
 LS.Receive.Popup = L.popup();
 var sendIcon = L.icon({
   iconUrl: "images/marcador.png",
-  iconSize:     [25, 30], // size of the icon
-  iconAnchor:   [15, 20], // point of the icon which will correspond to marker's location
-  popupAnchor:  [3, -25]// point from which the popup should open relative to the iconAnchor
+  iconSize:     [30, 30], // size of the icon
+  iconAnchor:   [20, 20], // point of the icon which will correspond to marker's location
+  popupAnchor:  [-4, -25]// point from which the popup should open relative to the iconAnchor
 });
 
 receiveIcon = L.icon({
   iconUrl: "images/marcador.png",
-  iconSize:     [25, 30], // size of the icon
-  iconAnchor:   [15, 20], // point of the icon which will correspond to marker's location
-  popupAnchor:  [3, -25] // point from which the popup should open relative to the iconAnchor
+  iconSize:     [30, 30], // size of the icon
+  iconAnchor:   [20, 20], // point of the icon which will correspond to marker's location
+  popupAnchor:  [-4, -25] // point from which the popup should open relative to the iconAnchor
 });
 
 L.Map.addInitHook(function () {
@@ -40,7 +40,7 @@ L.Control.ShareLocation = L.Control.extend({
         this.link = L.DomUtil.create('a', 'leaflet-bar-part', container);
 //        var userIcon = L.DomUtil.create('i', 'fa fa-users fa-lg', this.link);
         var userIcon = L.DomUtil.create('img' , 'img-responsive btnNotas' , this.link);
-        userIcon.src = 'images/notes2.png';
+        userIcon.src = 'images/marcador.png';
         this.link.href = '#';
 
         L.DomEvent.on(this.link, 'click', this._click, this);
@@ -77,7 +77,7 @@ populateMarker = function (selectedMap) {
     selectedMap.setView({
       "lat": intermediate.lat,
       "lng": intermediate.lng
-    },16)
+    },14)
   } 
 }
 
@@ -108,7 +108,7 @@ function getJsonFromUrl () {
 
 function copyPrompt() {
   var el = document.getElementById('btnNotas');
-  note = location.origin + location.pathname + '?' + 
+  note = 'sharesheet://url='+location.origin + location.pathname + '?' + 
     'lat' + '=' + LS.Send.lat + '&' +
     'lng' + '=' + LS.Send.lng + '&' +
      'M' + '=' +  LS.Send.Message;

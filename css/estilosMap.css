@@ -1,11 +1,33 @@
 body {
 	font-family: 'Lato', sans-serif;
+	width: 100%;
+	height: 100%;
 }
 #mapa {
 	position: absolute;
 	height: 100%;
 	bottom: 0;
 	width: 100%;
+}
+#modalStart {
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	margin-top: -75px;
+	margin-left: -75px;
+}
+#modalStart p {
+	font-size: 3em;
+	letter-spacing: 1.5px;
+	font-weight: normal;
+	text-align: center;
+}
+#modalStart img {
+	width: 150px;
+	height: 150px;
+
 }
 #modalNotas {
 	height: 75%;
@@ -50,10 +72,9 @@ body {
 	width: 40px;
 	border-radius: 50%;
 	height: 40px;
-	border: 1px solid white;
+	border: 1px solid black;
 	cursor: pointer;
 }
 .btnNotas {
-	margin-top: 8px;
-	margin-left: 8px;
+	
 }

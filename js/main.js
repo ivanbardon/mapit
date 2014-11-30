@@ -6,26 +6,39 @@ var mapaGris = L.tileLayer('http://{s}.www.toolserver.org/tiles/bw-mapnik/{z}/{x
 var mapaTopo =  L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png');
 
 $(document).on('ready',function (){
+
+
+
 	map = L.map('mapa', {
-	    center: [46.195042, 4.833984],
+	    center: [46.316584, 2.416992],
 	    minZoom: 1,
 	    maxZoom:18,
-	    zoom: 3,
+	    zoom: 4,
 	    scrollWheelZoom: true,
 	    zoomControl: false
-	})
+	});
 
-	map.addLayer(mapaNormal);
+	map.addLayer(mapaTopo);
+
+	$('#mapa').hide();
+
+	$('#modalStart img').click(function(){
+		$('#modalStart').fadeOut(300,function(){
+			$('#mapa').fadeIn(300)
+		})
+	});
 
 	lc = L.control.locate({
 		follow: true
 	}).addTo(map);
 
-	map.on('startfollowing', function() {
-	    map.on('dragstart', lc.stopFollowing);
-	}).on('stopfollowing', function() {
-	    map.off('dragstart', lc.stopFollowing);
-	})
+	map
+		.on('startfollowing', function() {
+		    map.on('dragstart', lc.stopFollowing);
+		})
+		.on('stopfollowing', function() {
+		    map.off('dragstart', lc.stopFollowing);
+		})
 	$('#btnCerrar').on('click', function(){
 		$('#modalNotas').fadeToggle();
 		$('.btnMain').fadeIn();

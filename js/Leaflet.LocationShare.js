@@ -108,7 +108,7 @@ function getJsonFromUrl () {
 
 function copyPrompt() {
   var el = document.getElementById('btnNotas');
-  note = 'sharesheet://url='+location.origin + location.pathname + '?' + 
+  note = location.origin + location.pathname + '?' + 
     'lat' + '=' + LS.Send.lat + '&' +
     'lng' + '=' + LS.Send.lng + '&' +
      'M' + '=' +  LS.Send.Message;

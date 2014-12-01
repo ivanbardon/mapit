@@ -2,6 +2,12 @@ body {
 	font-family: 'Lato', sans-serif;
 	width: 100%;
 	height: 100%;
+	position: absolute;
+}
+footer {
+	text-align: center;
+	width: 100%;
+	height: 150px;
 }
 #mapa {
 	position: absolute;
@@ -9,64 +15,46 @@ body {
 	bottom: 0;
 	width: 100%;
 }
-#modalStart {
-	width: 150px;
-	height: 150px;
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	margin-top: -75px;
-	margin-left: -75px;
+#btnNotas img {
+	width: 42px;
+	margin-left: 37%;
+	margin-top: 20px;
 }
-#modalStart p {
+#modalShare {
+	display: none;
+}
+#social {
+	width: 300px;
+	position: relative;
+	left: 10%
+}
+.titulo {
 	font-size: 3em;
 	letter-spacing: 1.5px;
 	font-weight: normal;
 	text-align: center;
+	margin-top: 80% 
 }
-#modalStart img {
+.logo {
 	width: 150px;
 	height: 150px;
-
-}
-#modalNotas {
-	height: 75%;
-	width: 80%;
-	padding: 5px;
 	position: absolute;
-	top: 15px;
-	left: 8%;
-	background-color: rgba(255,255,255, 1);
-	display: none;
-	border: 1px solid black;
+	top: 20%;
+	left: 50%;
+	margin-top: -75px;
+	margin-left: -75px;
 }
-#modalNotas p {
-	padding: 15px;
+.shareText {
 	text-align: center;
-	font-size: 1.2em;
-}
-#cajaBtnNotas {
-	margin-top: 35%;
-}
-#btnCerrar {
-	cursor: pointer;
-	font-size: 3em;
-	font-weight: lighter;
-	float: left;
-	padding: 5px 20px 5px 5px;
 }
 .btnSocial {
 	display: inline-block;
-	margin-left: 40px;
+	margin-top: 50px;
+	width: 42px;
+	padding: 20px;
 }
 .btnSocial img {
-	width: 200%;
-	height: auto;
-	margin-top: 50px;
-}
-.peq {
-	width: 6%;
-	height: auto;
+	width: 42px;
 }
 .btnMain {
 	width: 40px;
@@ -74,7 +62,4 @@ body {
 	height: 40px;
 	border: 1px solid black;
 	cursor: pointer;
-}
-.btnNotas {
-	
 }

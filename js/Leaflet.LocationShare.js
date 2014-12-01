@@ -32,7 +32,7 @@ L.Map.addInitHook(function () {
 L.Control.ShareLocation = L.Control.extend({
     options: {
         position: 'bottomleft',
-        title: 'Dixar una nota'
+        title: 'Crear un mapit'
     },
     onAdd: function () {
         var container = L.DomUtil.create('div', 'btnMain');
@@ -115,8 +115,8 @@ function copyPrompt() {
   console.log(note);
   el.href = note;
   map.closePopup();
-  $('#modalNotas').fadeToggle();
-  $('.btnMain').fadeOut();
+  $('#modalShare').fadeToggle();
+  $('#mapa').fadeOut();
 
 } 
           

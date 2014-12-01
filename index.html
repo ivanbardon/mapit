@@ -10,7 +10,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Map.it">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+  <link rel="stylesheet" href="vendors/leaflet-0.7.3/leaflet.css" />
   <link rel="stylesheet" href="css/estilosMap.css">
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/L.Control.Locate.css" />
@@ -22,26 +22,37 @@
 </head>
 <body>
 
-  <section id="modalStart">
-    <img src="images/logo1.svg" alt="logo" />
-    <p>·mapit·</p>
+  <section id="modalStart" class="modal">
+    <img class="logo" src="images/logo1.svg" alt="logo" />
+    <p class="titulo">·mapit·</p>
+    <p class="shareText">Crear un mapit es tan fácil como colocar un punto en el mapa y asociarle una nota.</p>
+    <p class="shareText">Lo que hagas después con él es cosa tuya.</p>
+    <p class="shareText">",</p>
   </section>
 
   <div id="mapa"></div>
 
-  <section id="modalNotas">
-    <div id="btnCerrar">&laquo</div>
-    <div id="cajaBtnNotas">
-      <p>Mantén pulsado el icono <img src="images/shareIcon.svg" alt="share">para copiar la nota</p>
+  <section id="modalShare" class="modal">
+
+    <img class="logo" src="images/logo1.svg" alt="logo" />
+    <p class="titulo">·mapit·</p>
+
+    <p class="shareText">Ya tienes creado tu Mapit</p>
+    <p class="shareText">Mantén pulsado el icono de <i>nota</i> para copiar el link o compartelo por cualquiera de los demás métodos</p>
+
+    <section id="social">
+      <div><a id="btnNotas" href="#"><img src="images/link.svg" alt="share"></a></div>
+      <div class="btnSocial"><img src="images/mail.svg" alt="facebook"></div>
       <div class="btnSocial"><img src="images/twIcon.svg" alt="twitter"></div>
       <div class="btnSocial"><img src="images/fbIcon.svg" alt="facebook"></div>
-      <a id="btnNotas" href="#"><div class="btnSocial peq"><img src="images/shareIcon.svg" alt="share"></div></a>
-    </div>
+    </section>
   </section>
+  <footer>
+    <p>appßeta 2014©</p>
+  </footer>
   
-  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+  <script src="vendors/jquery-1.11.1.min.js"></script>
+  <script src="vendors/leaflet-0.7.3/leaflet.js"></script>
   <script src="js/Leaflet.LocationShare.js"></script>
   <script src="js/L.Control.Locate.js" ></script>
   <script src="js/main.js"></script>

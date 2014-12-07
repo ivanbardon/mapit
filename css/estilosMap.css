@@ -4,6 +4,7 @@ body {
 	width: 100%;
 	height: 100%;
 	position: absolute;
+	overflow-x: hidden;
 }
 footer {
 	text-align: center;
@@ -23,6 +24,7 @@ footer {
 }
 #modalShare {
 	display: none;
+	width: 100%;
 }
 #social {
 	width: 300px;

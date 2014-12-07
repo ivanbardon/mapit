@@ -1,5 +1,6 @@
 body {
 	font-family: 'Lato', sans-serif;
+	font-size: 18px;
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -33,7 +34,7 @@ footer {
 	letter-spacing: 1.5px;
 	font-weight: normal;
 	text-align: center;
-	margin-top: 80% 
+	margin-top: 270px; 
 }
 .logo {
 	width: 150px;

@@ -113,12 +113,14 @@ function copyPrompt() {
     'lat' + '=' + LS.Send.lat + '&' +
     'lng' + '=' + LS.Send.lng + '&' +
      'M' + '=' +  LS.Send.Message;
+
   console.log(note);
   el.href = note;
   mail.href = "mailto:escoge un contacto?subject=Mapit&body="+note+"";
   map.closePopup();
   $('#modalShare').fadeToggle();
   $('#mapa').fadeOut();
+  return note;
 
 } 
           

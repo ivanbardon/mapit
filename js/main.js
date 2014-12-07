@@ -7,7 +7,7 @@ var mapaTopo =  L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/
 
 $(document).on('ready',function (){
 
-	if (window.location.href != "http://localhost/") {
+	if (window.location.href != "http://ivanbardon.github.io/mapit/") {
 		$('#modalStart').fadeOut();
 		$('#mapa').fadeIn();
 	}else{$('#mapa').hide()}

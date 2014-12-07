@@ -3,7 +3,7 @@ var note;
 var LS = L.LocShare;
 LS.Send = {};
 LS.Send.Marker = {};
-LS.Send.Popup = L.popup().setContent('<div><input id="sendText" type="text" style="border-color:#a7a7a7;border:solid;border-width:1px;border-radius:5px;height:30px;" size="30" onkeyup="L.LocShare.Send.UpdateMessage( this )" placeholder=""/></div><div style="height:35px;"><button style="border-style:solid;border-radius:5px;border-color:#3d94f6;float:right;color:white;background-color:#3d94f6;height:25px;font-size:15px;line-height:3px;margin:5px;" onclick="copyPrompt()">Copiar</button></div></div>');
+LS.Send.Popup = L.popup().setContent('<div><input id="sendText" type="text" style="border-color:#a7a7a7;border:solid;border-width:1px;border-radius:5px;height:30px;" size="30" onkeyup="L.LocShare.Send.UpdateMessage( this )" placeholder="Añade una nota"/></div><div style="height:35px;"><button style="border-style:solid;border-radius:5px;border-color:#3d94f6;float:right;color:white;background-color:#3d94f6;height:25px;font-size:15px;line-height:3px;margin:5px;" onclick="copyPrompt()">Crear</button></div></div>');
 LS.Receive = {};
 LS.Receive.Marker = {};
 LS.Receive.Popup = L.popup();

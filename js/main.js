@@ -7,7 +7,10 @@ var mapaTopo =  L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/
 
 $(document).on('ready',function (){
 
-
+	if (window.location.href != "http://localhost/") {
+		$('#modalStart').fadeOut();
+		$('#mapa').fadeIn();
+	}else{$('#mapa').hide()}
 
 	map = L.map('mapa', {
 	    center: [46.316584, 2.416992],
@@ -19,8 +22,6 @@ $(document).on('ready',function (){
 	});
 
 	map.addLayer(mapaTopo);
-
-	$('#mapa').hide();
 
 	$('#modalStart img').click(function(){
 		$('#modalStart').fadeOut(300,function(){
@@ -38,12 +39,19 @@ $(document).on('ready',function (){
 		})
 		.on('stopfollowing', function() {
 		    map.off('dragstart', lc.stopFollowing);
-		})
-	$('#btnCerrar').on('click', function(){
-		$('#modalNotas').fadeToggle();
-		$('.btnMain').fadeIn();
+		});
+
+	$('#aqui').click(function(){
+		$('#modalStart').fadeOut();
+		$('#mapa').fadeIn();	
 	});
+	$('#retorn').click(function(){
+		$('#mapa').fadeIn();
+		$('#modalShare').fadeOut();
+	})
 })
+	
+	
 
 
 
